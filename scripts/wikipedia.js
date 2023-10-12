@@ -79,4 +79,25 @@ if (targetNode) {
 
     // Start observing the target node for configured mutations
     observer.observe(targetNode, config);
+
+    // Now to get sounds.
+    
+    // Find all hyperlinks on the webpage
+    const links = document.querySelectorAll('a');
+    
+    // Add a click event listener to each hyperlink
+    links.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            // Prevent the default link behavior (optional)
+            event.preventDefault();
+        
+            // Play the sound when the hyperlink is clicked
+            const audio = new Audio(chrome.runtime.getURL('sounds/wikipedia_link_sound.mp3'));
+            audio.play();
+        
+            // You can also perform other actions here if needed
+            // For example, open the link in a new tab
+            chrome.tabs.create({ url: link.href });
+        });
+    });
 }
