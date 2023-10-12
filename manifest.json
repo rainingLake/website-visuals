@@ -3,11 +3,25 @@
   "name": "Website Visuals",
   "version": "1.0",
   "description": "Adding cool little visual effects, like making the settings cog on wikipedia turn when you hover over it.",
+  
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
 
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "sounds/wikipedia_link_sound.mp3"
+      ],
+      "matches": ["https://www.wikipedia.org/*", "https://en.wikipedia.org/*"]
+    }
+  ],
+  
   "content_scripts": [
     {
       "js": ["scripts/wikipedia.js"],
-      "matches": ["https://www.wikipedia.org/*"]
+      "matches": ["https://www.wikipedia.org/*", "https://en.wikipedia.org/*"]
     }
   ]
 }
