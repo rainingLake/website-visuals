@@ -1,0 +1,6 @@
+{
+  "manifest_version": 1,
+  "name": "Website Visuals",
+  "version": "1.0",
+  "description": "Adding cool little visual effects, like making the settings cog on wikipedia turn when you hover over it."
+}
