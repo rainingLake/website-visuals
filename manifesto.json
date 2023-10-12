@@ -6,7 +6,7 @@
 
   "content_scripts": [
     {
-      "js": ["scripts/content.js"],
+      "js": ["scripts/wikipedia.js"],
       "matches": ["https://www.wikipedia.org/*"]
     }
   ]
